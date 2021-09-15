@@ -1,0 +1,140 @@
+
+@import "./Utils/Variables";
+@import "./Utils/Mixin";
+
+
+body {
+    
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family:  Arial, serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+}
+
+
+.ConteneurLogo {
+    display: block;
+    width: 50% ;
+    margin: 0em auto 0.2em auto ;
+    padding-top: 1em;
+
+    &__Image {
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+    }
+}
+
+
+.Localisation {
+
+    display: flex ;
+    justify-content: center;
+    margin: 1em auto 0 auto ;
+    background-color: $ColorLocalisation ;
+    padding: 0.5em 0 0.5em 0;
+
+    &__Position {
+        padding-top: 0.6em;
+        font-size: 1.2em;
+        padding-right: 0.5em;
+    }
+    &__Texte {
+        
+        font-size: 1em;
+        text-align: center; 
+    }
+}
+
+.Reserver {
+    background-color: $ColorReserver ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0em ;
+    padding: auto;
+    
+    &__Titre {
+        width: 75%;
+        margin: 0em auto 0 auto;
+        font-size: 1.7em;
+        font-weight: 750;
+        text-align: center;
+        padding: 2em 0 0 0;
+    }
+    &__Paragraphe {
+        width: 85%;
+        margin: 1em auto 2em auto;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    &__BoutonExplorerNosRestaurants{
+        margin: 0em auto 4em auto;
+        background-color: blueviolet;
+        padding: 0.2em 2em  0.2em 2em;
+        border-radius: 2em 2em 2em 2em; 
+    }
+    &__BoutonExplorerNosRestaurants h2{
+        padding: 0em;
+        font-weight: 200;
+        color: white;
+        font-size: 1.1em;
+    }
+
+}
+
+.Fonctionnement {
+    &__Titre {
+        margin: 2em 0em 1em 0.7em;
+    }
+
+    &__BoutonChoisissezUnRestaurant {
+        @include MenuFonctionnement () ;
+    }
+    &__ConposezVotreMenu {
+        @include MenuFonctionnement () ;
+    }
+    &__DégustezAuRestaurant {
+        @include MenuFonctionnement () ;
+    }
+}
+
+.Restaurant {
+    background-color: $ColorReserver ;
+    padding: 0em 0em 3em 0em ;
+    &__Titre {
+        margin: 3.5em 0em 1em 1em;
+        padding: 2.5em 0em 0em 0em ;
+    }
+
+    &__LaPaletteDuGout{
+        @include PresentationRestaurant () ;
+    }
+    &__LaNoteEnchantee {
+        @include PresentationRestaurant () ;
+    }
+    &__ALaFrancaise {
+        @include PresentationRestaurant () ;
+    }
+    &__LeDeliceDesSens{
+        @include PresentationRestaurant () ;
+    }
+
+}
+
+
+.BasDePage {
+    background-color: $ColorFooter;
+    color: white;
+    padding: 1em;
+
+    &__LogoBlanc {
+        width: 5em;
+        &__Image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

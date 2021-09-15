@@ -1,0 +1,64 @@
+@mixin MenuFonctionnement  {
+        display: flex;
+        background-color: $ColorReserver ;
+        padding: 0.35em;
+        position: relative;
+        margin: 0 02em 2em 02em;
+        border-radius: 1em;
+        box-shadow: 0em 0.4em 0.8em gray;
+        
+    &__Number {
+        background-color: $ColorPrimaire;
+        font-size: 1.1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        border-radius: 0.8em;
+        color: white;
+        position: absolute;
+        left: -0.6em;
+    }
+    &__Bouton {
+        display: flex;
+        &__Icone {
+            font-size: 1.4em;
+            color: gray;
+            padding: 0.7em 0.9em 0em 1.6em;
+        }
+        &__Texte {
+            font-size: 1.1em;
+            padding: 0.2em 0 0 0;
+            
+        }
+    }
+
+}
+
+
+@mixin PresentationRestaurant {
+    
+    width: 85%;
+    display: flex ;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    &__Image {
+        height: 11em;
+        display: flex ;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__Nom {
+        font-size: 1.3em;
+        margin: 1em 0 0em 0.7em;
+        font-weight: 700;
+    }
+    &__Lieu {
+        font-size: 1.3em;
+        margin: 0.3em 0 1em 0.7em;
+    }
+}

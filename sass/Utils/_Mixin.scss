@@ -5,12 +5,13 @@
         position: relative;
         margin: 0 02em 2em 02em;
         border-radius: 1em;
-        box-shadow: 0em 0.4em 0.8em gray;
+        box-shadow: 0em 0.4em 0.8em $ColorHombre;
         
     &__Number {
         background-color: $ColorPrimaire;
         font-size: 1.1em;
         padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-top: 1em;
         border-radius: 0.8em;
         color: white;
         position: absolute;
@@ -21,10 +22,10 @@
         &__Icone {
             font-size: 1.4em;
             color: gray;
-            padding: 0.7em 0.9em 0em 1.6em;
+            padding: 0.8em 0.9em 0em 1.6em;
         }
         &__Texte {
-            font-size: 1.1em;
+            font-size: 1.2em;
             padding: 0.2em 0 0 0;
             
         }
@@ -42,8 +43,9 @@
     margin: 1em auto 1.5em auto;
     border-radius: 1em;
     overflow: hidden;
+    position: relative;
     &__Image {
-        height: 11em;
+        height: 13em;
         display: flex ;
         
         & img {
@@ -55,10 +57,24 @@
     &__Nom {
         font-size: 1.3em;
         margin: 1em 0 0em 0.7em;
-        font-weight: 700;
+        font-weight: 900;
     }
     &__Lieu {
         font-size: 1.3em;
         margin: 0.3em 0 1em 0.7em;
     }
+    &__Coeur {
+        width: 3.5em;
+        margin-bottom:0.75em;
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        &__Image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
+
+

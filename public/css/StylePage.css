@@ -1,0 +1,78 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  /* font-family: 'Shrikhand', Arial, serif; */
+  font-family: "Roboto", sans-serif;
+  padding: 0em;
+  margin: 0em;
+  width: 100%;
+  position: relative;
+}
+
+header {
+  display: flex;
+}
+
+.ConteneurLogo {
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 0em auto 0.2em auto;
+  padding-top: 1em;
+}
+.ConteneurLogo__Image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.IconeFleche {
+  margin: 1.2em 0 0 0.5em;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+}
+.IconeFleche i {
+  font-size: 1.5em;
+}
+
+.BasDePage {
+  background-color: #353535;
+  color: white;
+  padding: 2em;
+  font-size: 1.15em;
+}
+.BasDePage__LogoBlanc {
+  width: 7em;
+  margin-bottom: 0.75em;
+}
+.BasDePage__LogoBlanc__Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.BasDePage__ProposerUnRestaurant {
+  display: flex;
+  padding: 0em;
+  margin: 0 0 -1em 0;
+}
+.BasDePage__ProposerUnRestaurant__Icone {
+  padding: 1em 1em 0 0;
+}
+.BasDePage__DevenirPartenaire {
+  display: flex;
+  padding: 0em;
+  margin: 0 0 -1em 0;
+}
+.BasDePage__DevenirPartenaire__Icone {
+  margin: 1em 0.7em 0 0;
+}
+.BasDePage a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=StylePage.css.map */

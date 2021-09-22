@@ -69,10 +69,19 @@
         position: absolute;
         bottom: 1em;
         right: 1em;
+        background:no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+ 
+
         &__Image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            
+        }
+        &--Plein {
+            width: 3.5em;
+            height: 02em;
+            background:no-repeat center/100%  url("../../images/logo/CoeurPlein.png");
         }
     }
 }

@@ -1,0 +1,91 @@
+@import "./Utils/Variables";
+@import "./Utils/Mixin";
+
+a {
+    text-decoration:none ;
+    color:black ;
+ }
+
+
+body {
+    
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family: 'Roboto', sans-serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    position: relative;
+}
+
+header {
+    display: flex;
+
+}
+
+
+.ConteneurLogo {
+    display: block;
+    width: 50% ;
+    height: 100%;
+    margin: 0em auto 0.2em auto ;
+    padding-top: 1em;
+
+    &__Image {
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+    }
+}
+
+.IconeFleche {
+    margin: 1.2em 0 0 0.5em;
+    position: absolute;
+    width: 1.5em ;
+    height: 1.5em;
+
+    & i {
+        font-size: 01.5em;
+    }
+}
+
+
+
+
+.BasDePage {
+    background-color: $ColorFooter;
+    color: white;
+    padding: 2em;
+    font-size: 1.15em;
+     
+
+    &__LogoBlanc {
+        width: 7em;
+        margin-bottom:0.75em;
+        &__Image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__ProposerUnRestaurant {
+        display: flex;
+        padding: 0em;
+        margin: 0 0 -1em 0;
+        &__Icone{
+            padding: 1em 1em 0 0;
+            
+        }        
+    }
+    &__DevenirPartenaire {
+        display: flex;
+        padding: 0em;
+        margin: 0 0 -1em 0;
+        &__Icone{
+            margin: 1em 0.7em 0 0;
+        }        
+    }
+    & a {
+        text-decoration:none ;
+        color:white ;
+    }
+}

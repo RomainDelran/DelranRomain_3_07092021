@@ -7,6 +7,11 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .ConteneurLogo {
   display: block;
   width: 50%;
@@ -216,11 +221,17 @@ body {
   position: absolute;
   bottom: 1em;
   right: 1em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__LaPaletteDuGout__Coeur__Image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.Restaurant__LaPaletteDuGout__Coeur--Plein {
+  width: 3.5em;
+  height: 2em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__LaPaletteDuGout__Nouveau {
   position: absolute;
@@ -265,11 +276,17 @@ body {
   position: absolute;
   bottom: 1em;
   right: 1em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__LaNoteEnchantee__Coeur__Image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.Restaurant__LaNoteEnchantee__Coeur--Plein {
+  width: 3.5em;
+  height: 2em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__LaNoteEnchantee__Nouveau {
   position: absolute;
@@ -314,11 +331,17 @@ body {
   position: absolute;
   bottom: 1em;
   right: 1em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__ALaFrancaise__Coeur__Image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.Restaurant__ALaFrancaise__Coeur--Plein {
+  width: 3.5em;
+  height: 2em;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 .Restaurant__LeDeliceDesSens {
   width: 85%;
@@ -350,15 +373,18 @@ body {
 }
 .Restaurant__LeDeliceDesSens__Coeur {
   width: 3.5em;
+  height: 2em;
   margin-bottom: 0.75em;
   position: absolute;
   bottom: 1em;
   right: 1em;
+  background: no-repeat center/100% url("../../images/logo/Coeur.png");
+  opacity: 1;
+  transition: opacity 1250ms;
 }
-.Restaurant__LeDeliceDesSens__Coeur__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.Restaurant__LeDeliceDesSens__Coeur:hover {
+  opacity: 0;
+  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
 }
 
 .BasDePage {

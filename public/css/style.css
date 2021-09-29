@@ -1,426 +1,1029 @@
 @charset "UTF-8";
-body {
-  /* font-family: 'Shrikhand', Arial, serif; */
-  font-family: "Roboto", sans-serif;
-  padding: 0em;
-  margin: 0em;
-  width: 100%;
-}
+@media all and (max-width: 991.98px) {
+  html {
+    background-color: white;
+  }
 
-a {
-  text-decoration: none;
-  color: black;
-}
+  .spinner {
+    z-index: 6;
+    position: fixed;
+    top: calc(50% - 5em);
+    left: calc(50% - 5em);
+    width: 10em;
+    height: 10em;
+    animation: spinner 0.75s linear 3, fadein 2.25s linear 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  .spinner__Image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    animation: fadein 2.25s linear 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  .spinner span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .spinner .spinner-inner-1 {
+    background: linear-gradient(to right, rgba(255, 121, 218, 0) 0%, rgba(255, 121, 218, 0) 50%, #FF79DA 51%);
+  }
+  .spinner .spinner-inner-2 {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
+  }
+  .spinner .spinner-inner-3 {
+    top: 1em;
+    left: 1em;
+    width: 8em;
+    height: 8em;
+    background: white;
+  }
 
-.ConteneurLogo {
-  display: block;
-  width: 50%;
-  margin: 0em auto 0.2em auto;
-  padding-top: 1em;
-}
-.ConteneurLogo__Image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  body {
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family: "Roboto", sans-serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+  }
 
-.Localisation {
-  display: flex;
-  justify-content: center;
-  margin: 1em auto 0 auto;
-  background-color: #eaeaea;
-  padding: 0.5em 0 0.5em 0;
-}
-.Localisation__Position {
-  padding-top: 0.8em;
-  font-size: 1.2em;
-  padding-right: 0.5em;
-}
-.Localisation__Texte {
-  font-size: 1.2em;
-  text-align: center;
-}
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-.Reserver {
-  background-color: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0em;
-  padding: auto;
-}
-.Reserver__Titre {
-  width: 75%;
-  margin: 0em auto 0 auto;
-  font-size: 1.8em;
-  font-weight: 900;
-  text-align: center;
-  padding: 2em 0 0 0;
-}
-.Reserver__Paragraphe {
-  width: 85%;
-  margin: 1em auto 2em auto;
-  text-align: center;
-  font-size: 1.3em;
-}
-.Reserver__BoutonExplorerNosRestaurants {
-  margin: 0em auto 4em auto;
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 0.2em 2em 0.2em 2em;
-  border-radius: 2em 2em 2em 2em;
-  box-shadow: 0em 0.4em 0.8em #aaaaaa;
-}
-.Reserver__BoutonExplorerNosRestaurants h2 {
-  padding: 0em;
-  font-weight: 200;
-  color: white;
-  font-size: 1.1em;
-}
+  .ConteneurLogo {
+    display: block;
+    width: 50%;
+    margin: 0em auto 0.2em auto;
+    padding-top: 1em;
+  }
+  .ConteneurLogo__Image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.Fonctionnement__Titre {
-  margin: 2em 0em 1em 0.7em;
-  font-size: 1.8em;
-  font-weight: 900;
-}
-.Fonctionnement__BoutonChoisissezUnRestaurant {
-  display: flex;
-  background-color: #f6f6f6;
-  padding: 0.35em;
-  position: relative;
-  margin: 0 2em 2em 2em;
-  border-radius: 1em;
-  box-shadow: 0em 0.4em 0.8em #aaaaaa;
-}
-.Fonctionnement__BoutonChoisissezUnRestaurant__Number {
-  background-color: #9356DC;
-  font-size: 1.1em;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  margin-top: 1em;
-  border-radius: 0.8em;
-  color: white;
-  position: absolute;
-  left: -0.6em;
-}
-.Fonctionnement__BoutonChoisissezUnRestaurant__Bouton {
-  display: flex;
-}
-.Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Icone {
-  font-size: 1.4em;
-  color: gray;
-  padding: 0.8em 0.9em 0em 1.6em;
-}
-.Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Texte {
-  font-size: 1.2em;
-  padding: 0.2em 0 0 0;
-}
-.Fonctionnement__ConposezVotreMenu {
-  display: flex;
-  background-color: #f6f6f6;
-  padding: 0.35em;
-  position: relative;
-  margin: 0 2em 2em 2em;
-  border-radius: 1em;
-  box-shadow: 0em 0.4em 0.8em #aaaaaa;
-}
-.Fonctionnement__ConposezVotreMenu__Number {
-  background-color: #9356DC;
-  font-size: 1.1em;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  margin-top: 1em;
-  border-radius: 0.8em;
-  color: white;
-  position: absolute;
-  left: -0.6em;
-}
-.Fonctionnement__ConposezVotreMenu__Bouton {
-  display: flex;
-}
-.Fonctionnement__ConposezVotreMenu__Bouton__Icone {
-  font-size: 1.4em;
-  color: gray;
-  padding: 0.8em 0.9em 0em 1.6em;
-}
-.Fonctionnement__ConposezVotreMenu__Bouton__Texte {
-  font-size: 1.2em;
-  padding: 0.2em 0 0 0;
-}
-.Fonctionnement__DégustezAuRestaurant {
-  display: flex;
-  background-color: #f6f6f6;
-  padding: 0.35em;
-  position: relative;
-  margin: 0 2em 2em 2em;
-  border-radius: 1em;
-  box-shadow: 0em 0.4em 0.8em #aaaaaa;
-}
-.Fonctionnement__DégustezAuRestaurant__Number {
-  background-color: #9356DC;
-  font-size: 1.1em;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  margin-top: 1em;
-  border-radius: 0.8em;
-  color: white;
-  position: absolute;
-  left: -0.6em;
-}
-.Fonctionnement__DégustezAuRestaurant__Bouton {
-  display: flex;
-}
-.Fonctionnement__DégustezAuRestaurant__Bouton__Icone {
-  font-size: 1.4em;
-  color: gray;
-  padding: 0.8em 0.9em 0em 1.6em;
-}
-.Fonctionnement__DégustezAuRestaurant__Bouton__Texte {
-  font-size: 1.2em;
-  padding: 0.2em 0 0 0;
-}
+  .Localisation {
+    display: flex;
+    justify-content: center;
+    margin: 1em auto 0 auto;
+    background-color: #eaeaea;
+    padding: 0.5em 0 0.5em 0;
+  }
+  .Localisation__Position {
+    padding-top: 0.8em;
+    font-size: 1.2em;
+    padding-right: 0.5em;
+  }
+  .Localisation__Texte {
+    font-size: 1.2em;
+    text-align: center;
+  }
 
-.Restaurant {
-  background-color: #f6f6f6;
-  padding: 0em 0em 3em 0em;
-  position: relative;
-}
-.Restaurant__Titre {
-  margin: 3.5em 0em 1em 1em;
-  padding: 2.5em 0em 0em 0em;
-  font-size: 1.8em;
-  font-weight: 900;
-}
-.Restaurant__LaPaletteDuGout {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 1em auto 1.5em auto;
-  border-radius: 1em;
-  overflow: hidden;
-  position: relative;
-}
-.Restaurant__LaPaletteDuGout__Image {
-  height: 13em;
-  display: flex;
-}
-.Restaurant__LaPaletteDuGout__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__LaPaletteDuGout__Nom {
-  font-size: 1.3em;
-  margin: 1em 0 0em 0.7em;
-  font-weight: 900;
-}
-.Restaurant__LaPaletteDuGout__Lieu {
-  font-size: 1.3em;
-  margin: 0.3em 0 1em 0.7em;
-}
-.Restaurant__LaPaletteDuGout__Coeur {
-  width: 3.5em;
-  margin-bottom: 0.75em;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__LaPaletteDuGout__Coeur__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__LaPaletteDuGout__Coeur--Plein {
-  width: 3.5em;
-  height: 2em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__LaPaletteDuGout__Nouveau {
-  position: absolute;
-  right: 1.5em;
-  top: 1.5em;
-  background-color: #99E2D0;
-  color: #008766;
-  padding: 0.5em 1em 0.5em 1em;
-  font-weight: 900;
-}
-.Restaurant__LaNoteEnchantee {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 1em auto 1.5em auto;
-  border-radius: 1em;
-  overflow: hidden;
-  position: relative;
-}
-.Restaurant__LaNoteEnchantee__Image {
-  height: 13em;
-  display: flex;
-}
-.Restaurant__LaNoteEnchantee__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__LaNoteEnchantee__Nom {
-  font-size: 1.3em;
-  margin: 1em 0 0em 0.7em;
-  font-weight: 900;
-}
-.Restaurant__LaNoteEnchantee__Lieu {
-  font-size: 1.3em;
-  margin: 0.3em 0 1em 0.7em;
-}
-.Restaurant__LaNoteEnchantee__Coeur {
-  width: 3.5em;
-  margin-bottom: 0.75em;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__LaNoteEnchantee__Coeur__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__LaNoteEnchantee__Coeur--Plein {
-  width: 3.5em;
-  height: 2em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__LaNoteEnchantee__Nouveau {
-  position: absolute;
-  right: 1.5em;
-  top: 1.5em;
-  background-color: #99E2D0;
-  color: #008766;
-  padding: 0.5em 1em 0.5em 1em;
-  font-weight: 900;
-}
-.Restaurant__ALaFrancaise {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 1em auto 1.5em auto;
-  border-radius: 1em;
-  overflow: hidden;
-  position: relative;
-}
-.Restaurant__ALaFrancaise__Image {
-  height: 13em;
-  display: flex;
-}
-.Restaurant__ALaFrancaise__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__ALaFrancaise__Nom {
-  font-size: 1.3em;
-  margin: 1em 0 0em 0.7em;
-  font-weight: 900;
-}
-.Restaurant__ALaFrancaise__Lieu {
-  font-size: 1.3em;
-  margin: 0.3em 0 1em 0.7em;
-}
-.Restaurant__ALaFrancaise__Coeur {
-  width: 3.5em;
-  margin-bottom: 0.75em;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__ALaFrancaise__Coeur__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__ALaFrancaise__Coeur--Plein {
-  width: 3.5em;
-  height: 2em;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
-.Restaurant__LeDeliceDesSens {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 1em auto 1.5em auto;
-  border-radius: 1em;
-  overflow: hidden;
-  position: relative;
-}
-.Restaurant__LeDeliceDesSens__Image {
-  height: 13em;
-  display: flex;
-}
-.Restaurant__LeDeliceDesSens__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Restaurant__LeDeliceDesSens__Nom {
-  font-size: 1.3em;
-  margin: 1em 0 0em 0.7em;
-  font-weight: 900;
-}
-.Restaurant__LeDeliceDesSens__Lieu {
-  font-size: 1.3em;
-  margin: 0.3em 0 1em 0.7em;
-}
-.Restaurant__LeDeliceDesSens__Coeur {
-  width: 3.5em;
-  height: 2em;
-  margin-bottom: 0.75em;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  background: no-repeat center/100% url("../../images/logo/Coeur.png");
-  opacity: 1;
-  transition: opacity 1250ms;
-}
-.Restaurant__LeDeliceDesSens__Coeur:hover {
-  opacity: 0;
-  background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-}
+  .Reserver {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0em;
+    padding: auto;
+  }
+  .Reserver__Titre {
+    width: 75%;
+    margin: 0em auto 0 auto;
+    font-size: 1.8em;
+    font-weight: 900;
+    text-align: center;
+    padding: 2em 0 0 0;
+  }
+  .Reserver__Paragraphe {
+    width: 85%;
+    margin: 1em auto 2em auto;
+    text-align: center;
+    font-size: 1.3em;
+  }
+  .Reserver__BoutonExplorerNosRestaurants {
+    margin: 0em auto 4em auto;
+    background: linear-gradient(#FF79DA, #9356DC);
+    padding: 0.2em 2em 0.2em 2em;
+    border-radius: 2em 2em 2em 2em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Reserver__BoutonExplorerNosRestaurants h2 {
+    padding: 0em;
+    font-weight: 200;
+    color: white;
+    font-size: 1.1em;
+  }
 
-.BasDePage {
-  background-color: #353535;
-  color: white;
-  padding: 2em;
-  font-size: 1.15em;
+  .Fonctionnement__Titre {
+    margin: 2em 0em 1em 0.7em;
+    font-size: 1.8em;
+    font-weight: 900;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+  .Fonctionnement__ConposezVotreMenu {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__ConposezVotreMenu__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+  .Fonctionnement__DégustezAuRestaurant {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+
+  .Restaurant {
+    background-color: #f6f6f6;
+    padding: 0em 0em 3em 0em;
+    position: relative;
+  }
+  .Restaurant__Titre {
+    margin: 3.5em 0em 1em 1em;
+    padding: 2.5em 0em 0em 0em;
+    font-size: 1.8em;
+    font-weight: 900;
+  }
+  .Restaurant__LaPaletteDuGout {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+  }
+  .Restaurant__LaPaletteDuGout__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LaPaletteDuGout__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaPaletteDuGout__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LaPaletteDuGout__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    fill: transparent;
+    stroke-width: 500;
+    background-color: turquoise;
+    cursor: pointer;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Svg1 {
+    position: absolute;
+    left: 0em;
+    bottom: -0.5em;
+    overflow: visible;
+    width: 0.8em;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur g {
+    stroke: red;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    transform-origin: center;
+  }
+  .Restaurant__LaPaletteDuGout__Nouveau {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: 900;
+  }
+  .Restaurant__LaNoteEnchantee {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+  }
+  .Restaurant__LaNoteEnchantee__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LaNoteEnchantee__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaNoteEnchantee__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LaNoteEnchantee__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    fill: transparent;
+    stroke-width: 500;
+    background-color: turquoise;
+    cursor: pointer;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Svg1 {
+    position: absolute;
+    left: 0em;
+    bottom: -0.5em;
+    overflow: visible;
+    width: 0.8em;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur g {
+    stroke: red;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    transform-origin: center;
+  }
+  .Restaurant__LaNoteEnchantee__Nouveau {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: 900;
+  }
+  .Restaurant__ALaFrancaise {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+  }
+  .Restaurant__ALaFrancaise__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__ALaFrancaise__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__ALaFrancaise__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__ALaFrancaise__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__ALaFrancaise__Coeur {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    fill: transparent;
+    stroke-width: 500;
+    background-color: turquoise;
+    cursor: pointer;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Svg1 {
+    position: absolute;
+    left: 0em;
+    bottom: -0.5em;
+    overflow: visible;
+    width: 0.8em;
+  }
+  .Restaurant__ALaFrancaise__Coeur g {
+    stroke: red;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    transform-origin: center;
+  }
+  .Restaurant__LeDeliceDesSens {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+  }
+  .Restaurant__LeDeliceDesSens__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LeDeliceDesSens__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LeDeliceDesSens__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LeDeliceDesSens__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    fill: transparent;
+    stroke-width: 500;
+    background-color: turquoise;
+    cursor: pointer;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Svg1 {
+    position: absolute;
+    left: 0em;
+    bottom: -0.5em;
+    overflow: visible;
+    width: 0.8em;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur g {
+    stroke: red;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    transform-origin: center;
+  }
+
+  .BasDePage {
+    background-color: #353535;
+    color: white;
+    padding: 2em;
+    font-size: 1.15em;
+  }
+  .BasDePage__LogoBlanc {
+    width: 7em;
+    margin-bottom: 0.75em;
+  }
+  .BasDePage__LogoBlanc__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .BasDePage__ProposerUnRestaurant {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__ProposerUnRestaurant__Icone {
+    padding: 1em 1em 0 0;
+  }
+  .BasDePage__DevenirPartenaire {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__DevenirPartenaire__Icone {
+    margin: 1em 0.7em 0 0;
+  }
+  .BasDePage a {
+    text-decoration: none;
+    color: white;
+  }
 }
-.BasDePage__LogoBlanc {
-  width: 7em;
-  margin-bottom: 0.75em;
-}
-.BasDePage__LogoBlanc__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.BasDePage__ProposerUnRestaurant {
-  display: flex;
-  padding: 0em;
-  margin: 0 0 -1em 0;
-}
-.BasDePage__ProposerUnRestaurant__Icone {
-  padding: 1em 1em 0 0;
-}
-.BasDePage__DevenirPartenaire {
-  display: flex;
-  padding: 0em;
-  margin: 0 0 -1em 0;
-}
-.BasDePage__DevenirPartenaire__Icone {
-  margin: 1em 0.7em 0 0;
-}
-.BasDePage a {
-  text-decoration: none;
-  color: white;
+@media (min-width: 992px) {
+  html {
+    background-color: white;
+  }
+
+  .spinner {
+    z-index: 6;
+    position: fixed;
+    top: calc(50% - 5em);
+    left: calc(50% - 5em);
+    width: 10em;
+    height: 10em;
+    animation: spinner 0.75s linear 3, fadein 2.25s linear 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  .spinner__Image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    animation: fadein 2.25s linear 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  .spinner span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .spinner .spinner-inner-1 {
+    background: linear-gradient(to right, rgba(255, 121, 218, 0) 0%, rgba(255, 121, 218, 0) 50%, #FF79DA 51%);
+  }
+  .spinner .spinner-inner-2 {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
+  }
+  .spinner .spinner-inner-3 {
+    top: 1em;
+    left: 1em;
+    width: 8em;
+    height: 8em;
+    background: white;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  body {
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family: "Roboto", sans-serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .ConteneurLogo {
+    display: block;
+    width: 50%;
+    margin: 0em auto 0.2em auto;
+    padding-top: 1em;
+  }
+  .ConteneurLogo__Image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .Localisation {
+    display: flex;
+    justify-content: center;
+    margin: 1em auto 0 auto;
+    background-color: #eaeaea;
+    padding: 0.5em 0 0.5em 0;
+  }
+  .Localisation__Position {
+    padding-top: 0.8em;
+    font-size: 1.2em;
+    padding-right: 0.5em;
+  }
+  .Localisation__Texte {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .Reserver {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0em;
+    padding: auto;
+  }
+  .Reserver__Titre {
+    width: 75%;
+    margin: 0em auto 0 auto;
+    font-size: 1.8em;
+    font-weight: 900;
+    text-align: center;
+    padding: 2em 0 0 0;
+  }
+  .Reserver__Paragraphe {
+    width: 85%;
+    margin: 1em auto 2em auto;
+    text-align: center;
+    font-size: 1.3em;
+  }
+  .Reserver__BoutonExplorerNosRestaurants {
+    margin: 0em auto 4em auto;
+    background: linear-gradient(#FF79DA, #9356DC);
+    padding: 0.2em 2em 0.2em 2em;
+    border-radius: 2em 2em 2em 2em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Reserver__BoutonExplorerNosRestaurants h2 {
+    padding: 0em;
+    font-weight: 200;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .FonctionnementBouton {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Fonctionnement__Titre {
+    text-align: center;
+    margin: 2em 0em 1em 0.7em;
+    font-size: 1.8em;
+    font-weight: 900;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+  .Fonctionnement__ConposezVotreMenu {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__ConposezVotreMenu__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__ConposezVotreMenu__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+  .Fonctionnement__DégustezAuRestaurant {
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 2em 2em 2em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Number {
+    background-color: #9356DC;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-top: 1em;
+    border-radius: 0.8em;
+    color: white;
+    position: absolute;
+    left: -0.6em;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton {
+    display: flex;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton__Icone {
+    font-size: 1.4em;
+    color: gray;
+    padding: 0.8em 0.9em 0em 1.6em;
+  }
+  .Fonctionnement__DégustezAuRestaurant__Bouton__Texte {
+    font-size: 1.2em;
+    padding: 0.2em 0 0 0;
+  }
+
+  .Restaurant_Flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Restaurant {
+    background-color: #f6f6f6;
+    padding: 0em 0em 3em 0em;
+    position: relative;
+  }
+  .Restaurant__Titre {
+    margin: 3.5em 0em 1em 1em;
+    padding: 2.5em 0em 0em 0em;
+    font-size: 1.8em;
+    font-weight: 900;
+    text-align: center;
+  }
+  .Restaurant__LaPaletteDuGout {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5em;
+  }
+  .Restaurant__LaPaletteDuGout__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LaPaletteDuGout__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaPaletteDuGout__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LaPaletteDuGout__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur {
+    width: 3.5em;
+    margin-bottom: 0.75em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur--Plein {
+    width: 3.5em;
+    height: 2em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LaPaletteDuGout__Nouveau {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: 900;
+  }
+  .Restaurant__LaNoteEnchantee {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5em;
+  }
+  .Restaurant__LaNoteEnchantee__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LaNoteEnchantee__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaNoteEnchantee__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LaNoteEnchantee__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur {
+    width: 3.5em;
+    margin-bottom: 0.75em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur--Plein {
+    width: 3.5em;
+    height: 2em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LaNoteEnchantee__Nouveau {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: 900;
+  }
+  .Restaurant__ALaFrancaise {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5em;
+  }
+  .Restaurant__ALaFrancaise__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__ALaFrancaise__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__ALaFrancaise__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__ALaFrancaise__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__ALaFrancaise__Coeur {
+    width: 3.5em;
+    margin-bottom: 0.75em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__ALaFrancaise__Coeur__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__ALaFrancaise__Coeur--Plein {
+    width: 3.5em;
+    height: 2em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LeDeliceDesSens {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5em;
+  }
+  .Restaurant__LeDeliceDesSens__Image {
+    height: 13em;
+    display: flex;
+  }
+  .Restaurant__LeDeliceDesSens__Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LeDeliceDesSens__Nom {
+    font-size: 1.3em;
+    margin: 1em 0 0em 0.7em;
+    font-weight: 900;
+  }
+  .Restaurant__LeDeliceDesSens__Lieu {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0.7em;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur {
+    width: 3.5em;
+    margin-bottom: 0.75em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur--Plein {
+    width: 3.5em;
+    height: 2em;
+    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+  }
+
+  .BasDePage {
+    background-color: #353535;
+    color: white;
+    padding: 2em;
+    font-size: 1.15em;
+  }
+  .BasDePage__LogoBlanc {
+    width: 7em;
+    margin-bottom: 0.75em;
+  }
+  .BasDePage__LogoBlanc__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .BasDePage__ProposerUnRestaurant {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__ProposerUnRestaurant__Icone {
+    padding: 1em 1em 0 0;
+  }
+  .BasDePage__DevenirPartenaire {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__DevenirPartenaire__Icone {
+    margin: 1em 0.7em 0 0;
+  }
+  .BasDePage a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -64,11 +64,78 @@
         margin: 0.3em 0 1em 0.7em;
     }
     &__Coeur {
-        width: 3.5em;
-        margin-bottom:0.75em;
+        
+        width: 4em;
+        height: 4em;
+        
         position: absolute;
         bottom: 1em;
         right: 1em;
+
+        
+        fill: transparent;
+        
+        stroke-width: 500;
+        background-color: turquoise;
+        cursor: pointer;
+        &__Svg1 {
+            position: absolute;
+            left: 0em;
+            bottom: -0.5em;
+            overflow: visible;
+            width: 0.8em;
+        }
+        g {
+         
+            stroke:red;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 0;
+            transform-origin: center;
+            
+        }
+
+    }
+}
+
+
+@mixin PresentationRestaurant_GrandFormat {
+    
+    width: 85%;
+    display: flex ;
+    flex-direction: column;
+    background-color: white;
+    margin: 1em auto 1.5em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5em;
+    &__Image {
+        height: 13em;
+        display: flex ;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__Nom {
+        font-size: 1.3em;
+        margin: 1em 0 0em 0.7em;
+        font-weight: 900;
+    }
+    &__Lieu {
+        font-size: 1.3em;
+        margin: 0.3em 0 1em 0.7em;
+    }
+    &__Coeur {
+        width: 3.5em;
+        margin-bottom:0.75em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto ;
+        bottom: 1em;
+        
         background:no-repeat center/100% url("../../images/logo/CoeurPlein.png");
  
 
@@ -85,5 +152,3 @@
         }
     }
 }
-
-

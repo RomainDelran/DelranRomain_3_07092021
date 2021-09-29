@@ -1,91 +1,451 @@
 @import "./Utils/Variables";
 @import "./Utils/Mixin";
 
-a {
-    text-decoration:none ;
-    color:black ;
- }
 
 
-body {
-    
-    /* font-family: 'Shrikhand', Arial, serif; */
-    font-family: 'Roboto', sans-serif;
-    padding: 0em;
-    margin: 0em;
-    width: 100%;
-    position: relative;
-}
 
-header {
-    display: flex;
-
-}
+@media all and (max-width: 991.98px) {
+    a {
+        text-decoration:none ;
+        color:black ;
+    }
 
 
-.ConteneurLogo {
-    display: block;
-    width: 50% ;
-    height: 100%;
-    margin: 0em auto 0.2em auto ;
-    padding-top: 1em;
+    body {
+        
+        /* font-family: 'Shrikhand', Arial, serif; */
+        font-family: 'Roboto', sans-serif;
+        padding: 0em;
+        margin: 0em;
+        width: 100%;
+        position: relative;
+    }
 
-    &__Image {
+    header {
+        display: flex;
+
+    }
+
+
+    .ConteneurLogo {
+        display: block;
+        width: 50% ;
         height: 100%;
-        width:100%;
-        object-fit: cover;
-    }
-}
+        margin: 0em auto 0.2em auto ;
+        padding-top: 1em;
 
-.IconeFleche {
-    margin: 1.2em 0 0 0.5em;
-    position: absolute;
-    width: 1.5em ;
-    height: 1.5em;
-
-    & i {
-        font-size: 01.5em;
-    }
-}
-
-
-
-
-.BasDePage {
-    background-color: $ColorFooter;
-    color: white;
-    padding: 2em;
-    font-size: 1.15em;
-     
-
-    &__LogoBlanc {
-        width: 7em;
-        margin-bottom:0.75em;
         &__Image {
-            width: 100%;
             height: 100%;
-            object-fit: cover;
+            width:100%;
+            object-fit: cover ;
+        }
+
+    }
+
+    .IconeFleche {
+        margin: 1.2em 0 0 0.5em;
+        position: absolute;
+        width: 1.5em ;
+        height: 1.5em;
+
+        & i {
+            font-size: 01.5em;
         }
     }
-    &__ProposerUnRestaurant {
-        display: flex;
-        padding: 0em;
-        margin: 0 0 -1em 0;
-        &__Icone{
-            padding: 1em 1em 0 0;
-            
-        }        
+
+
+    .LaNoteEnchantee {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/LaNoteEnchantee.jpg");
     }
-    &__DevenirPartenaire {
-        display: flex;
-        padding: 0em;
-        margin: 0 0 -1em 0;
-        &__Icone{
-            margin: 1em 0.7em 0 0;
-        }        
+    .ALaFrancaise {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/ALaFrancaise.jpg");
     }
-    & a {
+    .LaPaletteDuGout {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/LaPaletteDuGout.jpg");
+    }
+    .LeDeliceDesSens {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/DeliceDesSens.jpg");
+    }
+
+
+
+
+    .NomDuRestaurant {
+        background-color: $ColorLocalisation;
+        margin: -2em 0 -2em 0;
+        padding: 0.5em 0 0em 1em;
+        z-index: 2;
+        border-radius: 2em 2em 0 0 ;
+        display: flex;
+        justify-content: space-between;
+        & h2 {
+            font-family: 'Shrikhand', Arial, serif;
+            font-size: 1.8em;
+        }
+        &__Coeur {
+            width: 1.5em;
+            height: 1.5em;
+            z-index: 3;
+            margin: 2em 2em 0 0;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    section {
+        background-color: $ColorLocalisation ;
+        padding-bottom: 02em;
+    }
+
+    .Titre {
+        background-color:$ColorLocalisation ;
+        padding: 0 0 0 1em;
+        padding-top: 3em;
+        & h2 {
+            margin: 0;
+            padding-bottom:0.2em ;
+            font-size: 01.3em;
+            font-weight: 200 ;
+            color: $ColorFooter;
+        }
+        &__Trait {
+            background-color: $ColorTertiaire ;
+            width: 3em;
+            height: 0.2em;
+            margin: 0;
+        }
+    }
+
+    article {
+        width: 85%;
+        margin: 01em auto 0 auto;
+        padding: 1em 1.5em 1em 1em;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        box-shadow:0em 0em 0.5em $ColorHombre ;
+        & h3 {
+            margin: 0;
+            padding: 0;
+        }
+        & .Descriptif {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5em;
+            & p {
+                margin: 0;
+                padding: 0;
+            }
+            & h2 {
+                margin: 0;
+                padding: 0;
+                font-weight: 1000 ;
+                font-size: 1em;
+            }
+        }
+
+    }
+    .Bouton {
+        background-color: $ColorLocalisation ;
+        padding: 2em 0 5em 0;
+        &__Commander {
+            width: 10em;
+            margin: 00em auto 0em auto;
+            background: linear-gradient(  $ColorSecondaire, $ColorPrimaire);
+            padding: 0.2em 2em  0.2em 2em;
+            border-radius: 2em 2em 2em 2em; 
+            box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            & h2 {
+                text-align: center;
+                padding: 0em;
+                font-weight: 200;
+                color: white;
+                font-size: 1.1em;
+            }
+        }
+    }
+
+
+
+
+    .BasDePage {
+        background-color: $ColorFooter;
+        color: white;
+        padding: 2em;
+        font-size: 1.15em;
+        
+
+        &__LogoBlanc {
+            width: 7em;
+            margin-bottom:0.75em;
+            &__Image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__ProposerUnRestaurant {
+            display: flex;
+            padding: 0em;
+            margin: 0 0 -1em 0;
+            &__Icone{
+                padding: 1em 1em 0 0;
+                
+            }        
+        }
+        &__DevenirPartenaire {
+            display: flex;
+            padding: 0em;
+            margin: 0 0 -1em 0;
+            &__Icone{
+                margin: 1em 0.7em 0 0;
+            }        
+        }
+        & a {
+            text-decoration:none ;
+            color:white ;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    a {
         text-decoration:none ;
-        color:white ;
+        color:black ;
+    }
+
+
+    body {
+        
+        /* font-family: 'Shrikhand', Arial, serif; */
+        font-family: 'Roboto', sans-serif;
+        padding: 0em;
+        margin: 0em;
+        width: 100%;
+        position: relative;
+    }
+
+    header {
+        display: flex;
+
+    }
+
+
+    .ConteneurLogo {
+        display: block;
+        width: 50% ;
+        height: 100%;
+        margin: 0em auto 0.2em auto ;
+        padding-top: 1em;
+
+        &__Image {
+            height: 100%;
+            width:100%;
+            object-fit: cover ;
+        }
+
+    }
+
+    .IconeFleche {
+        margin: 1.2em 0 0 0.5em;
+        position: absolute;
+        width: 1.5em ;
+        height: 1.5em;
+
+        & i {
+            font-size: 01.5em;
+        }
+    }
+
+
+    .LaNoteEnchantee {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/LaNoteEnchantee.jpg");
+    }
+    .ALaFrancaise {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/ALaFrancaise.jpg");
+    }
+    .LaPaletteDuGout {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/LaPaletteDuGout.jpg");
+    }
+    .LeDeliceDesSens {
+        width: 100%;
+        height: 15em;
+        z-index: 1;
+        background:no-repeat center/100% url("../../images/restaurants/DeliceDesSens.jpg");
+    }
+
+
+
+
+    .NomDuRestaurant {
+        background-color: $ColorLocalisation;
+        margin: -2em 0 -2em 0;
+        padding: 0.5em 0 0em 1em;
+        z-index: 2;
+        border-radius: 2em 2em 0 0 ;
+        display: flex;
+        justify-content: center;
+        
+        & h2 {
+            font-family: 'Shrikhand', Arial, serif;
+            font-size: 4em;
+            padding: 0em 02em 0em 04em;
+            
+        }
+        &__Coeur {
+            width: 1.5em;
+            height: 1.5em;
+            z-index: 3;
+            margin: 6em 2em 0 0;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    .MenuFlex {
+        display: flex;
+        justify-content: center;
+        background-color: $ColorLocalisation;
+    }
+    section {
+        background-color: $ColorLocalisation ;
+        padding-bottom: 02em;
+        padding: 0em 04em 0em 04em;
+    }
+
+    .Titre {
+        background-color:$ColorLocalisation ;
+        padding: 0 0 0 1em;
+        padding-top: 3em;
+        & h2 {
+            margin: 0;
+            padding-bottom:0.2em ;
+            font-size: 01.3em;
+            font-weight: 200 ;
+            color: $ColorFooter;
+        }
+        &__Trait {
+            background-color: $ColorTertiaire ;
+            width: 3em;
+            height: 0.2em;
+            margin: 0;
+        }
+    }
+
+    article {
+        width: 85%;
+        margin: 01em auto 0 auto;
+        padding: 1em 1.5em 1em 1em;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        box-shadow:0em 0em 0.5em $ColorHombre ;
+        & h3 {
+            margin: 0;
+            padding: 0;
+        }
+        & .Descriptif {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5em;
+            & p {
+                margin: 0;
+                padding: 0;
+            }
+            & h2 {
+                margin: 0;
+                padding: 0;
+                font-weight: 1000 ;
+                font-size: 1em;
+            }
+        }
+
+    }
+    .Bouton {
+        background-color: $ColorLocalisation ;
+        padding: 2em 0 5em 0;
+        &__Commander {
+            width: 10em;
+            margin: 00em auto 0em auto;
+            background: linear-gradient(  $ColorSecondaire, $ColorPrimaire);
+            padding: 0.2em 2em  0.2em 2em;
+            border-radius: 2em 2em 2em 2em; 
+            box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            & h2 {
+                text-align: center;
+                padding: 0em;
+                font-weight: 200;
+                color: white;
+                font-size: 1.1em;
+            }
+        }
+    }
+
+
+
+
+    .BasDePage {
+        background-color: $ColorFooter;
+        color: white;
+        padding: 2em;
+        font-size: 1.15em;
+        
+
+        &__LogoBlanc {
+            width: 7em;
+            margin-bottom:0.75em;
+            &__Image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__ProposerUnRestaurant {
+            display: flex;
+            padding: 0em;
+            margin: 0 0 -1em 0;
+            &__Icone{
+                padding: 1em 1em 0 0;
+                
+            }        
+        }
+        &__DevenirPartenaire {
+            display: flex;
+            padding: 0em;
+            margin: 0 0 -1em 0;
+            &__Icone{
+                margin: 1em 0.7em 0 0;
+            }        
+        }
+        & a {
+            text-decoration:none ;
+            color:white ;
+        }
     }
 }

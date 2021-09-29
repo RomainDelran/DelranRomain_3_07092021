@@ -1,78 +1,416 @@
-a {
-  text-decoration: none;
-  color: black;
-}
+@media all and (max-width: 991.98px) {
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-body {
-  /* font-family: 'Shrikhand', Arial, serif; */
-  font-family: "Roboto", sans-serif;
-  padding: 0em;
-  margin: 0em;
-  width: 100%;
-  position: relative;
-}
+  body {
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family: "Roboto", sans-serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    position: relative;
+  }
 
-header {
-  display: flex;
-}
+  header {
+    display: flex;
+  }
 
-.ConteneurLogo {
-  display: block;
-  width: 50%;
-  height: 100%;
-  margin: 0em auto 0.2em auto;
-  padding-top: 1em;
-}
-.ConteneurLogo__Image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+  .ConteneurLogo {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: 0em auto 0.2em auto;
+    padding-top: 1em;
+  }
+  .ConteneurLogo__Image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.IconeFleche {
-  margin: 1.2em 0 0 0.5em;
-  position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-}
-.IconeFleche i {
-  font-size: 1.5em;
-}
+  .IconeFleche {
+    margin: 1.2em 0 0 0.5em;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .IconeFleche i {
+    font-size: 1.5em;
+  }
 
-.BasDePage {
-  background-color: #353535;
-  color: white;
-  padding: 2em;
-  font-size: 1.15em;
+  .LaNoteEnchantee {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/LaNoteEnchantee.jpg");
+  }
+
+  .ALaFrancaise {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/ALaFrancaise.jpg");
+  }
+
+  .LaPaletteDuGout {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/LaPaletteDuGout.jpg");
+  }
+
+  .LeDeliceDesSens {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/DeliceDesSens.jpg");
+  }
+
+  .NomDuRestaurant {
+    background-color: #eaeaea;
+    margin: -2em 0 -2em 0;
+    padding: 0.5em 0 0em 1em;
+    z-index: 2;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .NomDuRestaurant h2 {
+    font-family: "Shrikhand", Arial, serif;
+    font-size: 1.8em;
+  }
+  .NomDuRestaurant__Coeur {
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 3;
+    margin: 2em 2em 0 0;
+  }
+  .NomDuRestaurant__Coeur img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  section {
+    background-color: #eaeaea;
+    padding-bottom: 2em;
+  }
+
+  .Titre {
+    background-color: #eaeaea;
+    padding: 0 0 0 1em;
+    padding-top: 3em;
+  }
+  .Titre h2 {
+    margin: 0;
+    padding-bottom: 0.2em;
+    font-size: 1.3em;
+    font-weight: 200;
+    color: #353535;
+  }
+  .Titre__Trait {
+    background-color: #99E2D0;
+    width: 3em;
+    height: 0.2em;
+    margin: 0;
+  }
+
+  article {
+    width: 85%;
+    margin: 1em auto 0 auto;
+    padding: 1em 1.5em 1em 1em;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 0em 0em 0.5em #aaaaaa;
+  }
+  article h3 {
+    margin: 0;
+    padding: 0;
+  }
+  article .Descriptif {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+  }
+  article .Descriptif p {
+    margin: 0;
+    padding: 0;
+  }
+  article .Descriptif h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 1000;
+    font-size: 1em;
+  }
+
+  .Bouton {
+    background-color: #eaeaea;
+    padding: 2em 0 5em 0;
+  }
+  .Bouton__Commander {
+    width: 10em;
+    margin: 0em auto 0em auto;
+    background: linear-gradient(#FF79DA, #9356DC);
+    padding: 0.2em 2em 0.2em 2em;
+    border-radius: 2em 2em 2em 2em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Bouton__Commander h2 {
+    text-align: center;
+    padding: 0em;
+    font-weight: 200;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .BasDePage {
+    background-color: #353535;
+    color: white;
+    padding: 2em;
+    font-size: 1.15em;
+  }
+  .BasDePage__LogoBlanc {
+    width: 7em;
+    margin-bottom: 0.75em;
+  }
+  .BasDePage__LogoBlanc__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .BasDePage__ProposerUnRestaurant {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__ProposerUnRestaurant__Icone {
+    padding: 1em 1em 0 0;
+  }
+  .BasDePage__DevenirPartenaire {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__DevenirPartenaire__Icone {
+    margin: 1em 0.7em 0 0;
+  }
+  .BasDePage a {
+    text-decoration: none;
+    color: white;
+  }
 }
-.BasDePage__LogoBlanc {
-  width: 7em;
-  margin-bottom: 0.75em;
-}
-.BasDePage__LogoBlanc__Image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.BasDePage__ProposerUnRestaurant {
-  display: flex;
-  padding: 0em;
-  margin: 0 0 -1em 0;
-}
-.BasDePage__ProposerUnRestaurant__Icone {
-  padding: 1em 1em 0 0;
-}
-.BasDePage__DevenirPartenaire {
-  display: flex;
-  padding: 0em;
-  margin: 0 0 -1em 0;
-}
-.BasDePage__DevenirPartenaire__Icone {
-  margin: 1em 0.7em 0 0;
-}
-.BasDePage a {
-  text-decoration: none;
-  color: white;
+@media (min-width: 992px) {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  body {
+    /* font-family: 'Shrikhand', Arial, serif; */
+    font-family: "Roboto", sans-serif;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    position: relative;
+  }
+
+  header {
+    display: flex;
+  }
+
+  .ConteneurLogo {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: 0em auto 0.2em auto;
+    padding-top: 1em;
+  }
+  .ConteneurLogo__Image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .IconeFleche {
+    margin: 1.2em 0 0 0.5em;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .IconeFleche i {
+    font-size: 1.5em;
+  }
+
+  .LaNoteEnchantee {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/LaNoteEnchantee.jpg");
+  }
+
+  .ALaFrancaise {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/ALaFrancaise.jpg");
+  }
+
+  .LaPaletteDuGout {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/LaPaletteDuGout.jpg");
+  }
+
+  .LeDeliceDesSens {
+    width: 100%;
+    height: 15em;
+    z-index: 1;
+    background: no-repeat center/100% url("../../images/restaurants/DeliceDesSens.jpg");
+  }
+
+  .NomDuRestaurant {
+    background-color: #eaeaea;
+    margin: -2em 0 -2em 0;
+    padding: 0.5em 0 0em 1em;
+    z-index: 2;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  .NomDuRestaurant h2 {
+    font-family: "Shrikhand", Arial, serif;
+    font-size: 4em;
+    padding: 0em 2em 0em 4em;
+  }
+  .NomDuRestaurant__Coeur {
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 3;
+    margin: 6em 2em 0 0;
+  }
+  .NomDuRestaurant__Coeur img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .MenuFlex {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+  }
+
+  section {
+    background-color: #eaeaea;
+    padding-bottom: 2em;
+    padding: 0em 4em 0em 4em;
+  }
+
+  .Titre {
+    background-color: #eaeaea;
+    padding: 0 0 0 1em;
+    padding-top: 3em;
+  }
+  .Titre h2 {
+    margin: 0;
+    padding-bottom: 0.2em;
+    font-size: 1.3em;
+    font-weight: 200;
+    color: #353535;
+  }
+  .Titre__Trait {
+    background-color: #99E2D0;
+    width: 3em;
+    height: 0.2em;
+    margin: 0;
+  }
+
+  article {
+    width: 85%;
+    margin: 1em auto 0 auto;
+    padding: 1em 1.5em 1em 1em;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 0em 0em 0.5em #aaaaaa;
+  }
+  article h3 {
+    margin: 0;
+    padding: 0;
+  }
+  article .Descriptif {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+  }
+  article .Descriptif p {
+    margin: 0;
+    padding: 0;
+  }
+  article .Descriptif h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 1000;
+    font-size: 1em;
+  }
+
+  .Bouton {
+    background-color: #eaeaea;
+    padding: 2em 0 5em 0;
+  }
+  .Bouton__Commander {
+    width: 10em;
+    margin: 0em auto 0em auto;
+    background: linear-gradient(#FF79DA, #9356DC);
+    padding: 0.2em 2em 0.2em 2em;
+    border-radius: 2em 2em 2em 2em;
+    box-shadow: 0em 0.4em 0.8em #aaaaaa;
+  }
+  .Bouton__Commander h2 {
+    text-align: center;
+    padding: 0em;
+    font-weight: 200;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .BasDePage {
+    background-color: #353535;
+    color: white;
+    padding: 2em;
+    font-size: 1.15em;
+  }
+  .BasDePage__LogoBlanc {
+    width: 7em;
+    margin-bottom: 0.75em;
+  }
+  .BasDePage__LogoBlanc__Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .BasDePage__ProposerUnRestaurant {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__ProposerUnRestaurant__Icone {
+    padding: 1em 1em 0 0;
+  }
+  .BasDePage__DevenirPartenaire {
+    display: flex;
+    padding: 0em;
+    margin: 0 0 -1em 0;
+  }
+  .BasDePage__DevenirPartenaire__Icone {
+    margin: 1em 0.7em 0 0;
+  }
+  .BasDePage a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=StylePage.css.map */

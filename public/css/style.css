@@ -1,4 +1,48 @@
 @charset "UTF-8";
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    stroke: url(#Gradient);
+    fill: url(#Gradient);
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: url(#Gradient);
+    stroke: url(#Gradient);
+  }
+}
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: url(#Gradient);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
 @media all and (max-width: 991.98px) {
   html {
     background-color: white;
@@ -280,28 +324,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LaPaletteDuGout__Coeur {
-    width: 4em;
-    height: 4em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     right: 1em;
     fill: transparent;
-    stroke-width: 500;
-    background-color: turquoise;
+    stroke: black;
+    stroke-width: 40;
     cursor: pointer;
   }
-  .Restaurant__LaPaletteDuGout__Coeur__Svg1 {
-    position: absolute;
-    left: 0em;
-    bottom: -0.5em;
+  .Restaurant__LaPaletteDuGout__Coeur svg {
     overflow: visible;
-    width: 0.8em;
+    width: 2em;
   }
-  .Restaurant__LaPaletteDuGout__Coeur g {
-    stroke: red;
+  .Restaurant__LaPaletteDuGout__Coeur path {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+    stroke-dasharray: 1550;
     transform-origin: center;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LaPaletteDuGout__Nouveau {
     position: absolute;
@@ -341,28 +398,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LaNoteEnchantee__Coeur {
-    width: 4em;
-    height: 4em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     right: 1em;
     fill: transparent;
-    stroke-width: 500;
-    background-color: turquoise;
+    stroke: black;
+    stroke-width: 40;
     cursor: pointer;
   }
-  .Restaurant__LaNoteEnchantee__Coeur__Svg1 {
-    position: absolute;
-    left: 0em;
-    bottom: -0.5em;
+  .Restaurant__LaNoteEnchantee__Coeur svg {
     overflow: visible;
-    width: 0.8em;
+    width: 2em;
   }
-  .Restaurant__LaNoteEnchantee__Coeur g {
-    stroke: red;
+  .Restaurant__LaNoteEnchantee__Coeur path {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+    stroke-dasharray: 1550;
     transform-origin: center;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LaNoteEnchantee__Nouveau {
     position: absolute;
@@ -402,28 +472,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__ALaFrancaise__Coeur {
-    width: 4em;
-    height: 4em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     right: 1em;
     fill: transparent;
-    stroke-width: 500;
-    background-color: turquoise;
+    stroke: black;
+    stroke-width: 40;
     cursor: pointer;
   }
-  .Restaurant__ALaFrancaise__Coeur__Svg1 {
-    position: absolute;
-    left: 0em;
-    bottom: -0.5em;
+  .Restaurant__ALaFrancaise__Coeur svg {
     overflow: visible;
-    width: 0.8em;
+    width: 2em;
   }
-  .Restaurant__ALaFrancaise__Coeur g {
-    stroke: red;
+  .Restaurant__ALaFrancaise__Coeur path {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+    stroke-dasharray: 1550;
     transform-origin: center;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LeDeliceDesSens {
     width: 85%;
@@ -454,28 +537,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LeDeliceDesSens__Coeur {
-    width: 4em;
-    height: 4em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     right: 1em;
     fill: transparent;
-    stroke-width: 500;
-    background-color: turquoise;
+    stroke: black;
+    stroke-width: 40;
     cursor: pointer;
   }
-  .Restaurant__LeDeliceDesSens__Coeur__Svg1 {
-    position: absolute;
-    left: 0em;
-    bottom: -0.5em;
+  .Restaurant__LeDeliceDesSens__Coeur svg {
     overflow: visible;
-    width: 0.8em;
+    width: 2em;
   }
-  .Restaurant__LeDeliceDesSens__Coeur g {
-    stroke: red;
+  .Restaurant__LeDeliceDesSens__Coeur path {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+    stroke-dasharray: 1550;
     transform-origin: center;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
 
   .BasDePage {
@@ -808,23 +904,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LaPaletteDuGout__Coeur {
-    width: 3.5em;
-    margin-bottom: 0.75em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 1em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-  }
-  .Restaurant__LaPaletteDuGout__Coeur__Image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .Restaurant__LaPaletteDuGout__Coeur--Plein {
-    width: 3.5em;
+    width: 2em;
     height: 2em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LaPaletteDuGout__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LaPaletteDuGout__Nouveau {
     position: absolute;
@@ -865,23 +979,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LaNoteEnchantee__Coeur {
-    width: 3.5em;
-    margin-bottom: 0.75em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 1em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-  }
-  .Restaurant__LaNoteEnchantee__Coeur__Image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .Restaurant__LaNoteEnchantee__Coeur--Plein {
-    width: 3.5em;
+    width: 2em;
     height: 2em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LaNoteEnchantee__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LaNoteEnchantee__Nouveau {
     position: absolute;
@@ -922,23 +1054,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__ALaFrancaise__Coeur {
-    width: 3.5em;
-    margin-bottom: 0.75em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 1em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-  }
-  .Restaurant__ALaFrancaise__Coeur__Image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .Restaurant__ALaFrancaise__Coeur--Plein {
-    width: 3.5em;
+    width: 2em;
     height: 2em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
+  }
+  .Restaurant__ALaFrancaise__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .Restaurant__ALaFrancaise__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__ALaFrancaise__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
   .Restaurant__LeDeliceDesSens {
     width: 85%;
@@ -970,23 +1120,41 @@
     margin: 0.3em 0 1em 0.7em;
   }
   .Restaurant__LeDeliceDesSens__Coeur {
-    width: 3.5em;
-    margin-bottom: 0.75em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 1em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
-  }
-  .Restaurant__LeDeliceDesSens__Coeur__Image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .Restaurant__LeDeliceDesSens__Coeur--Plein {
-    width: 3.5em;
+    width: 2em;
     height: 2em;
-    background: no-repeat center/100% url("../../images/logo/CoeurPlein.png");
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .Restaurant__LeDeliceDesSens__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
 
   .BasDePage {

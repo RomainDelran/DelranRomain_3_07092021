@@ -33,6 +33,101 @@
 
 }
 
+@mixin AnimationCoeurPageInterieur () {
+    width: 2em;
+    height: 2em;
+    
+    position: relative;
+    margin-right: 2em;
+    margin-top: 2em ;
+
+    fill:transparent;
+    stroke: $CoeurVide;
+    stroke-width: 40;
+    cursor: pointer;
+    
+
+    svg{
+        overflow: visible;
+        width: 2em;
+    }
+
+    path{
+        
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1550;
+        transform-origin: center;
+    }
+
+    &__Background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        stroke: none;
+    } 
+
+    &__Principal {
+        animation-fill-mode: forwards;
+        &:hover path{
+            animation: stroke-animation 2s ease-in-out forwards;
+            
+        }
+        &:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+            animation: fade-animation 2s ease-in-out forwards;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+
+@mixin AnimationCoeur (){
+    width: 2em;
+    height: 2em;
+    
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+
+    fill:transparent;
+    stroke: $CoeurVide;
+    stroke-width: 40;
+    cursor: pointer;
+    
+
+    svg{
+        overflow: visible;
+        width: 2em;
+    }
+
+    path{
+        
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1550;
+        transform-origin: center;
+    }
+
+    &__Background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        stroke: none;
+    } 
+
+    &__Principal {
+        animation-fill-mode: forwards;
+        &:hover path{
+            animation: stroke-animation 2s ease-in-out forwards;
+            
+        }
+        &:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+            animation: fade-animation 2s ease-in-out forwards;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
 
 @mixin PresentationRestaurant {
     
@@ -64,36 +159,7 @@
         margin: 0.3em 0 1em 0.7em;
     }
     &__Coeur {
-        
-        width: 4em;
-        height: 4em;
-        
-        position: absolute;
-        bottom: 1em;
-        right: 1em;
-
-        
-        fill: transparent;
-        
-        stroke-width: 500;
-        background-color: turquoise;
-        cursor: pointer;
-        &__Svg1 {
-            position: absolute;
-            left: 0em;
-            bottom: -0.5em;
-            overflow: visible;
-            width: 0.8em;
-        }
-        g {
-         
-            stroke:red;
-            stroke-dashoffset: 0;
-            stroke-dasharray: 0;
-            transform-origin: center;
-            
-        }
-
+        @include AnimationCoeur ();
     }
 }
 
@@ -129,26 +195,6 @@
         margin: 0.3em 0 1em 0.7em;
     }
     &__Coeur {
-        width: 3.5em;
-        margin-bottom:0.75em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto ;
-        bottom: 1em;
-        
-        background:no-repeat center/100% url("../../images/logo/CoeurPlein.png");
- 
-
-        &__Image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
-        }
-        &--Plein {
-            width: 3.5em;
-            height: 02em;
-            background:no-repeat center/100%  url("../../images/logo/CoeurPlein.png");
-        }
+        @include AnimationCoeur ();
     }
 }

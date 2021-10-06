@@ -1,4 +1,78 @@
-@media all and (max-width: 991.98px) {
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    stroke: url(#Gradient);
+    fill: url(#Gradient);
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: url(#Gradient);
+    stroke: url(#Gradient);
+  }
+}
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: url(#Gradient);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes AnimationMenuOpacite {
+  0% {
+    transform: translate(0em, 2em);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(0em, 0.5em);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0em, 0em);
+    opacity: 1;
+  }
+}
+@keyframes AnimationContenuMenuBouton {
+  0% {
+    width: 0em;
+  }
+  100% {
+    width: 7em;
+  }
+}
+@keyframes RotationContenuMenuBouton {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media all and (max-width: 1023.98px) {
   a {
     text-decoration: none;
     color: black;
@@ -82,15 +156,41 @@
     font-size: 1.8em;
   }
   .NomDuRestaurant__Coeur {
-    width: 1.5em;
-    height: 1.5em;
-    z-index: 3;
-    margin: 2em 2em 0 0;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    margin-right: 2em;
+    margin-top: 2em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
   }
-  .NomDuRestaurant__Coeur img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .NomDuRestaurant__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .NomDuRestaurant__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .NomDuRestaurant__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .NomDuRestaurant__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .NomDuRestaurant__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .NomDuRestaurant__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
 
   section {
@@ -118,31 +218,61 @@
   }
 
   article {
+    position: relative;
+    animation: AnimationMenuOpacite 2s linear 1;
+    animation-fill-mode: forwards;
     width: 85%;
     margin: 1em auto 0 auto;
-    padding: 1em 1.5em 1em 1em;
+    padding: 0em 0em 0em 0em;
     background-color: white;
     border-radius: 1em 1em 1em 1em;
     box-shadow: 0em 0em 0.5em #aaaaaa;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
   }
-  article h3 {
-    margin: 0;
+  article .ContenuMenu {
+    width: 100%;
+    position: relative;
+    display: column;
+    padding: 1em 0em 1em 1em;
+    text-overflow: ellipsis;
+  }
+  article .ContenuMenu h3 {
+    margin: 0em 0em 0em 0em;
     padding: 0;
   }
-  article .Descriptif {
+  article .ContenuMenu__Descriptif {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5em;
   }
-  article .Descriptif p {
+  article .ContenuMenu__Descriptif p {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0em 0;
   }
-  article .Descriptif h2 {
+  article .ContenuMenu__Descriptif h2 {
+    position: relative;
     margin: 0;
-    padding: 0;
+    padding: 0 1.5em 0em 1.5em;
     font-weight: 1000;
-    font-size: 1em;
+  }
+  article .ContenuMenuBouton {
+    width: 0em;
+    background-color: #99E2D0;
+    text-align: center;
+    padding-top: 1.5em;
+  }
+  article .ContenuMenuBouton i {
+    color: #f6f6f6;
+    font-size: 2em;
+  }
+  article :hover + .ContenuMenuBouton {
+    animation: AnimationContenuMenuBouton 0.25s linear 1;
+    animation-fill-mode: forwards;
+  }
+  article :hover + .ContenuMenuBouton i {
+    animation: RotationContenuMenuBouton 0.25s linear 1;
   }
 
   .Bouton {
@@ -201,7 +331,7 @@
     color: white;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   a {
     text-decoration: none;
     color: black;
@@ -286,15 +416,41 @@
     padding: 0em 2em 0em 4em;
   }
   .NomDuRestaurant__Coeur {
-    width: 1.5em;
-    height: 1.5em;
-    z-index: 3;
-    margin: 6em 2em 0 0;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    margin-right: 2em;
+    margin-top: 2em;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 40;
+    cursor: pointer;
   }
-  .NomDuRestaurant__Coeur img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .NomDuRestaurant__Coeur svg {
+    overflow: visible;
+    width: 2em;
+  }
+  .NomDuRestaurant__Coeur path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .NomDuRestaurant__Coeur__Background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .NomDuRestaurant__Coeur__Principal {
+    animation-fill-mode: forwards;
+  }
+  .NomDuRestaurant__Coeur__Principal:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .NomDuRestaurant__Coeur__Principal:hover ~ .Restaurant__LeDeliceDesSens__Coeur__Background path {
+    animation: fade-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
   }
 
   .MenuFlex {

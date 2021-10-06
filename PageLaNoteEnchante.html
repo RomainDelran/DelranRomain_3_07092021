@@ -36,8 +36,18 @@
     <div class="NomDuRestaurant">
         <h2>La note enchantée</h2>
         <div class="NomDuRestaurant__Coeur">
-            <img   src="images/logo/Coeur.png" alt="Coeur" />
-        </div>
+            <svg class="NomDuRestaurant__Coeur__Principal" viewBox="0 0 512 512" width="100" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                <defs>
+                    <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+              <svg class="NomDuRestaurant__Coeur__Background" viewBox="0 0 512 512" width="100" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+            </svg>         </div>
     </div>
 
 
@@ -49,34 +59,54 @@
             </div>
 
             <article>
-                <h3>Ravioles de foie gras</h3>
-                <div class="Descriptif">
-                    <p>Accompagnés de leur crème à la truffe</p>
-                    <h2>25€</h2>
+                <div class="ContenuMenu">
+                    <h3>Ravioles de foie gras</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Accompagnés de leur crème à la truffe</p>
+                        <h2>25€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Caviar osciètre</h3>
-                <div class="Descriptif">
-                    <p>Sur blini à la farine de blé noir</p>
-                    <h2>35€</h2>
+                <div class="ContenuMenu">
+                    <h3>Caviar osciètre</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Sur blini à la farine de blé noir</p>
+                        <h2>35€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Homard et espuma</h3>
-                <div class="Descriptif">
-                    <p>Mariné aux zests d'orange</p>
-                    <h2>20€</h2>
+                <div class="ContenuMenu">
+                    <h3>Homard et espuma</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Mariné aux zests d'orange</p>
+                        <h2>20€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Foie gras de canard cuit entier</h3>
-                <div class="Descriptif">
-                    <p>Confiture de figue et pain toasté</p>
-                    <h2>35€</h2>
+                <div class="ContenuMenu">
+                    <h3>Foie gras de canard cuit entier</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Confiture de figue et pain toasté</p>
+                        <h2>35€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
         </section>
@@ -88,26 +118,41 @@
             </div>
 
             <article>
-                <h3>Noix de coquilles de Sain-Jacques</h3>
-                <div class="Descriptif">
-                    <p>Sur lit de purée de célerie-rave</p>
-                    <h2>40€</h2>
+                <div class="ContenuMenu">
+                    <h3>Noix de coquilles de Sain-Jacques</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Sur lit de purée de célerie-rave</p>
+                        <h2>40€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Langoustine poêlée</h3>
-                <div class="Descriptif">
-                    <p>Purée de patate douce</p>
-                    <h2>35€</h2>
+                <div class="ContenuMenu">
+                    <h3>Langoustine poêlée</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Purée de patate douce</p>
+                        <h2>35€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Mijoté de queue de boeuf</h3>
-                <div class="Descriptif">
-                    <p>Et riz sauvage aux zests de citron</p>
-                    <h2>44€</h2>
+                <div class="ContenuMenu">
+                    <h3>Mijoté de queue de boeuf</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Et riz sauvage aux zests de citron</p>
+                        <h2>44€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
         </section>
@@ -119,26 +164,41 @@
             </div>
 
             <article>
-                <h3>Macaron noisette et chocolat</h3>
-                <div class="Descriptif">
-                    <p>Glace au caramel brun et sel de Guérande</p>
-                    <h2>18€</h2>
+                <div class="ContenuMenu">
+                    <h3>Macaron noisette et chocolat</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Glace au caramel brun et sel</p>
+                        <h2>18€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Baba au rhum revisité</h3>
-                <div class="Descriptif">
-                    <p>avec son coulis de citron</p>
-                    <h2>22€</h2>
+                <div class="ContenuMenu">
+                    <h3>Baba au rhum revisité</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>avec son coulis de citron</p>
+                        <h2>22€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Tarte au citron meringuée</h3>
-                <div class="Descriptif">
-                    <p>Destructurée</p>
-                    <h2>23€</h2>
+                <div class="ContenuMenu">
+                    <h3>Tarte au citron meringuée</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Destructurée</p>
+                        <h2>23€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
         </section>

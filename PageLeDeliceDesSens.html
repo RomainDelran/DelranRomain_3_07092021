@@ -36,8 +36,18 @@
     <div class="NomDuRestaurant">
         <h2>Le délice des sens</h2>
         <div class="NomDuRestaurant__Coeur">
-            <img   src="images/logo/Coeur.png" alt="Coeur" />
-        </div>
+            <svg class="NomDuRestaurant__Coeur__Principal" viewBox="0 0 512 512" width="100" >
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                <defs>
+                    <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+              <svg class="NomDuRestaurant__Coeur__Background" viewBox="0 0 512 512" width="100" >
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+            </svg>         </div>
     </div>
 
     <div class="MenuFlex">
@@ -48,26 +58,42 @@
             </div>
 
             <article>
-                <h3>Tartare de thon</h3>
-                <div class="Descriptif">
-                    <p>Assaisonné au yuzu</p>
-                    <h2>25€</h2>
+                <div class="ContenuMenu">
+                    <h3>Tartare de thon</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Assaisonné au yuzu</p>
+                        <h2>25€</h2> 
+                    </div>    
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="ContenuMenu">
+                    <h3>Bouchée de homard croustillant</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Et farandole de petits légumes</p>
+                        <h2>35€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Bouchée de homard croustillant</h3>
-                <div class="Descriptif">
-                    <p>Et sa farandole de petits légumes</p>
-                    <h2>35€</h2>
+                <div class="ContenuMenu">
+                    <h3>Velouté de cèpes</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Aux truffes</p>
+                        <h2>20€</h2>
+                    </div>
                 </div>
-            </article>
-
-            <article>
-                <h3>Velouté de cèpes</h3>
-                <div class="Descriptif">
-                    <p>Aux truffes</p>
-                    <h2>20€</h2>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
         </section>
@@ -79,28 +105,44 @@
             </div>
 
             <article>
-                <h3>Poulet rôti aux herbes de provence</h3>
-                <div class="Descriptif">
-                    <p>Et sa crème de truffe</p>
-                    <h2>40€</h2>
+                <div class="ContenuMenu">
+                    <h3>Poulet rôti aux herbes de provence</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Et sa crème de truffe</p>
+                        <h2>40€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Langouste rôti</h3>
-                <div class="Descriptif">
-                    <p>Et ses légumes de saison</p>
-                    <h2>35€</h2>
+                <div class="ContenuMenu">
+                    <h3>Langouste rôti</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Et ses légumes de saison</p>
+                        <h2>35€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Côte de boeuf angus</h3>
-                <div class="Descriptif">
-                    <p>Et sa purée de panais</p>
-                    <h2>44€</h2>
+                <div class="ContenuMenu">
+                    <h3>Côte de boeuf angus</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Et sa purée de panais</p>
+                        <h2>44€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
+
         </section>
 
         <section>
@@ -110,26 +152,41 @@
             </div>
 
             <article>
-                <h3>Farandole de desserts</h3>
-                <div class="Descriptif">
-                    <p>Du chef</p>
-                    <h2>18€</h2>
+                <div class="ContenuMenu">
+                    <h3>Farandole de desserts</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Du chef</p>
+                        <h2>18€</h2>
+                    </div>
+                 </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Crème brulée</h3>
-                <div class="Descriptif">
-                    <p>Revisité</p>
-                    <h2>22€</h2>
+                <div class="ContenuMenu">
+                    <h3>Crème brulée</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>Revisité</p>
+                        <h2>22€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
 
             <article>
-                <h3>Tiramisu</h3>
-                <div class="Descriptif">
-                    <p>A la noisette</p>
-                    <h2>23€</h2>
+                <div class="ContenuMenu">
+                    <h3>Tiramisu</h3>
+                    <div class="ContenuMenu__Descriptif">
+                        <p>A la noisette</p>
+                        <h2>23€</h2>
+                    </div>
+                </div>
+                <div class="ContenuMenuBouton">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </article>
         </section>

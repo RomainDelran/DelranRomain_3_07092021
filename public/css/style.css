@@ -43,7 +43,37 @@
     opacity: 0;
   }
 }
-@media all and (max-width: 991.98px) {
+@keyframes AnimationMenuOpacite {
+  0% {
+    transform: translate(0em, 2em);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(0em, 0.5em);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0em, 0em);
+    opacity: 1;
+  }
+}
+@keyframes AnimationContenuMenuBouton {
+  0% {
+    width: 0em;
+  }
+  100% {
+    width: 7em;
+  }
+}
+@keyframes RotationContenuMenuBouton {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media all and (max-width: 1184.98px) {
   html {
     background-color: white;
   }
@@ -177,6 +207,7 @@
     padding: 0.2em 2em 0.2em 2em;
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
   }
   .Reserver__BoutonExplorerNosRestaurants h2 {
     padding: 0em;
@@ -198,6 +229,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__BoutonChoisissezUnRestaurant__Number {
     background-color: #9356DC;
@@ -219,7 +258,7 @@
   }
   .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
   .Fonctionnement__ConposezVotreMenu {
     display: flex;
@@ -229,6 +268,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__ConposezVotreMenu:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__ConposezVotreMenu:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__ConposezVotreMenu__Number {
     background-color: #9356DC;
@@ -250,7 +297,7 @@
   }
   .Fonctionnement__ConposezVotreMenu__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
   .Fonctionnement__DégustezAuRestaurant {
     display: flex;
@@ -260,6 +307,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__DégustezAuRestaurant:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__DégustezAuRestaurant:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__DégustezAuRestaurant__Number {
     background-color: #9356DC;
@@ -281,7 +336,7 @@
   }
   .Fonctionnement__DégustezAuRestaurant__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
 
   .Restaurant {
@@ -610,7 +665,7 @@
     color: white;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1185px) {
   html {
     background-color: white;
   }
@@ -688,6 +743,7 @@
   }
 
   .ConteneurLogo {
+    max-width: 40em;
     display: block;
     width: 50%;
     margin: 0em auto 0.2em auto;
@@ -744,6 +800,7 @@
     padding: 0.2em 2em 0.2em 2em;
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
   }
   .Reserver__BoutonExplorerNosRestaurants h2 {
     padding: 0em;
@@ -771,6 +828,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__BoutonChoisissezUnRestaurant:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__BoutonChoisissezUnRestaurant__Number {
     background-color: #9356DC;
@@ -792,7 +857,7 @@
   }
   .Fonctionnement__BoutonChoisissezUnRestaurant__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
   .Fonctionnement__ConposezVotreMenu {
     display: flex;
@@ -802,6 +867,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__ConposezVotreMenu:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__ConposezVotreMenu:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__ConposezVotreMenu__Number {
     background-color: #9356DC;
@@ -823,7 +896,7 @@
   }
   .Fonctionnement__ConposezVotreMenu__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
   .Fonctionnement__DégustezAuRestaurant {
     display: flex;
@@ -833,6 +906,14 @@
     margin: 0 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
+    cursor: pointer;
+  }
+  .Fonctionnement__DégustezAuRestaurant:hover {
+    background-color: #f5edff;
+    box-shadow: 0em 0.8em 0.8em #aaaaaa;
+  }
+  .Fonctionnement__DégustezAuRestaurant:hover i {
+    color: #9356DC;
   }
   .Fonctionnement__DégustezAuRestaurant__Number {
     background-color: #9356DC;
@@ -854,7 +935,7 @@
   }
   .Fonctionnement__DégustezAuRestaurant__Bouton__Texte {
     font-size: 1.2em;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 2em 0 0;
   }
 
   .Restaurant_Flex {

@@ -47,6 +47,9 @@
         position: absolute;
         width: 1.5em ;
         height: 1.5em;
+        @media (min-width: 768px) and (max-width: 1023.98px) {
+            margin: 2.5em 0 0 0.5em;
+        }
 
         & i {
             font-size: 01.5em;
@@ -123,10 +126,30 @@
         }
     }
 
+.A1 {
+    animation:0s AnimationMenuOpacite 0.5s linear 1 ;
+    animation-fill-mode: forwards;
+}
+.A2{
+    animation:0.25s AnimationMenuOpacite 0.5s linear 1 ;
+    animation-fill-mode: forwards;
+}
+
+.A3{
+    animation:0.5s AnimationMenuOpacite 0.5s linear 1 ;
+    animation-fill-mode: forwards;
+}
+
+.A4{
+    animation:0.75s AnimationMenuOpacite 0.5s linear 1 ;
+    animation-fill-mode: forwards;
+}
+
     article {
         position: relative;
-        animation: AnimationMenuOpacite 2s linear 1 ;
-        animation-fill-mode: forwards;
+        opacity: 0;
+        
+
         width: 85%;
         margin: 01em auto 0 auto;
         padding: 0em 0em 0em 0em;
@@ -136,15 +159,22 @@
         display: flex;
         justify-content: space-between;        
         overflow: hidden;
+        cursor: pointer;
+
         & .ContenuMenu {
             width: 100%;
             position: relative;
             display: column;
             padding:1em 0em 01em 01em;
             text-overflow: ellipsis;
+
             & h3 {
                 margin:0em 0em 0em 0em;
                 padding: 0;
+                
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             &__Descriptif {
@@ -155,41 +185,70 @@
                 & p {
                     margin: 0;
                     padding: 0 0 0em  0;
-                    
-                    
+
                     
                 }
                 & h2 {
                     position: relative;
                     margin: 0;
                     padding: 0 1.5em 0em  1.5em;
-                    font-weight: 1000 ;
-                    
-                    
+                    font-weight: 1000 ; 
+                    top: -0.5em;
                 }
             }
         }
+        &:hover p {
+            max-width: 8em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media (min-width: 768px) and (max-width: 1023.98px) {
+                max-width: none;
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            }
+        &:hover h3 {
+            max-width: 8em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media (min-width: 768px) and (max-width: 1023.98px) {
+                max-width: none;
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
         & .ContenuMenuBouton {
             width: 00em;
             background-color: $ColorTertiaire;
             text-align: center;
-            padding-top: 1.5em;
-
+            padding-top: 2em;
+            transition: width 0.25s;
+            
             & i {
                 color: $ColorReserver;
                 font-size: 02em;
                 }
 
         }
-        & :hover + .ContenuMenuBouton {
-            animation: AnimationContenuMenuBouton 0.25s linear 1;
-            animation-fill-mode: forwards;
+        & :hover + .ContenuMenuBouton, .ContenuMenuBouton:hover {
+            width: 7em;
+            transition: width 0.25s;
+            
             & i {
                 animation: RotationContenuMenuBouton 0.25s linear 1 ;
             }
+        
         }
+        
     }
-
+    
 
 
     .Bouton {
@@ -202,6 +261,7 @@
             padding: 0.2em 2em  0.2em 2em;
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            cursor: pointer;
             & h2 {
                 text-align: center;
                 padding: 0em;
@@ -279,8 +339,9 @@
 
 
     .ConteneurLogo {
+        
         display: block;
-        width: 50% ;
+        width: 40em ;
         height: 100%;
         margin: 0em auto 0.2em auto ;
         padding-top: 1em;
@@ -294,7 +355,7 @@
     }
 
     .IconeFleche {
-        margin: 1.2em 0 0 0.5em;
+        margin: 3em 0 0 0.5em;
         position: absolute;
         width: 1.5em ;
         height: 1.5em;
@@ -345,31 +406,56 @@
         & h2 {
             font-family: 'Shrikhand', Arial, serif;
             font-size: 4em;
-            padding: 0em 02em 0em 04em;
+            padding: 0em 02em 0em 00em;
             
         }
         &__Coeur {
+            margin: 0em 0 0 0;
             @include AnimationCoeurPageInterieur ();
         }
     }
 
+    .A1 {
+        animation:0s AnimationMenuOpacite 0.5s linear 1 ;
+        animation-fill-mode: forwards;
+    }
+    .A2{
+        animation:0.25s AnimationMenuOpacite 0.5s linear 1 ;
+        animation-fill-mode: forwards;
+    }
+    
+    .A3{
+        animation:0.5s AnimationMenuOpacite 0.5s linear 1 ;
+        animation-fill-mode: forwards;
+    }
+    
+    .A4{
+        animation:0.75s AnimationMenuOpacite 0.5s linear 1 ;
+        animation-fill-mode: forwards;
+    }
+
 
     .MenuFlex {
-        display: flex;
-        justify-content: center;
+        
         background-color: $ColorLocalisation;
     }
     section {
+        width: 100%;
         background-color: $ColorLocalisation ;
-        padding-bottom: 02em;
-        padding: 0em 04em 0em 04em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        
     }
 
     .Titre {
         background-color:$ColorLocalisation ;
-        padding: 0 0 0 1em;
-        padding-top: 3em;
+        padding: 3em 0 0 1em;
+        margin:0 auto;
+        justify-content: center;
         & h2 {
+            
             margin: 0;
             padding-bottom:0.2em ;
             font-size: 01.3em;
@@ -377,44 +463,94 @@
             color: $ColorFooter;
         }
         &__Trait {
+            justify-content: center;
             background-color: $ColorTertiaire ;
             width: 3em;
             height: 0.2em;
-            margin: 0;
+            margin: 0 auto;
         }
+    }
+    .MenuFlexGranEcran{
+        width: 55em;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     article {
         width: 85%;
+        max-width: 25em;
         margin: 01em auto 0 auto;
-        padding: 1em 1.5em 1em 1em;
+        padding: 0em 1.5em 0em 0em;
         background-color: white;
         border-radius: 1em 1em 1em 1em;
         box-shadow:0em 0em 0.5em $ColorHombre ;
-        & h3 {
-            margin: 0;
-            padding: 0;
-        }
-        & .Descriptif {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.5em;
-            & p {
-                margin: 0;
-                padding: 0;
-            }
-            & h2 {
-                margin: 0;
-                padding: 0;
-                font-weight: 1000 ;
-                font-size: 1em;
-            }
-        }
+        display: flex;
+        justify-content: space-between;        
+        overflow: hidden;
+        cursor: pointer;
 
+        & .ContenuMenu {
+            width: 100%;
+            position: relative;
+            display: column;
+            padding:1em 0em 01em 01em;
+            text-overflow: ellipsis;
+
+            & h3 {
+                margin: 0;
+                padding: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__Descriptif {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0.5em;
+                & p {
+                    margin: 0;
+                    padding: 0;
+                }
+                & h2 {
+                    position: relative;
+                    margin: 0;
+                    padding: 0 1.5em 0em  1.5em;
+                    font-weight: 1000 ;
+                    font-size: 1em;
+                }
+            }
+        }
+        & .ContenuMenuBouton {
+            width: 00em;
+            padding: 0 0 0 0;
+            margin: 0 -1.5em 0 0;
+            background-color: $ColorTertiaire;
+            text-align: center;
+            padding-top: 1.5em;
+            transition: width 0.25s;
+            
+            & i {
+                color: $ColorReserver;
+                font-size: 02em;
+                }
+
+        }
+        & :hover + .ContenuMenuBouton, .ContenuMenuBouton:hover {
+            width: 7em;
+            transition: width 0.25s;
+            
+            & i {
+                animation: RotationContenuMenuBouton 0.25s linear 1 ;
+            }
+        
+        }
     }
     .Bouton {
         background-color: $ColorLocalisation ;
         padding: 2em 0 5em 0;
+        
         &__Commander {
             width: 10em;
             margin: 00em auto 0em auto;
@@ -422,6 +558,7 @@
             padding: 0.2em 2em  0.2em 2em;
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            cursor: pointer;
             & h2 {
                 text-align: center;
                 padding: 0em;

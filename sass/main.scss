@@ -5,7 +5,7 @@
 
 
 
-@media all and (max-width: 991.98px) {
+@media all and (max-width: 1184.98px) {
 
     html { 
         background-color: $background;
@@ -148,6 +148,7 @@
             padding: 0.2em 2em  0.2em 2em;
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            cursor: pointer;
         }
         &__BoutonExplorerNosRestaurants h2{
             padding: 0em;
@@ -266,7 +267,7 @@
 
 
 
-@media (min-width: 992px) {
+@media (min-width: 1185px) {
 
     html { 
         background-color: $background;
@@ -345,6 +346,7 @@
     }
 
     .ConteneurLogo {
+        max-width: 40em;
         display: block;
         width: 50% ;
         margin: 0em auto 0.2em auto ;
@@ -406,6 +408,7 @@
             padding: 0.2em 2em  0.2em 2em;
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
+            cursor: pointer;
         }
         &__BoutonExplorerNosRestaurants h2{
             padding: 0em;

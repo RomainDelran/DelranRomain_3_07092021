@@ -1,12 +1,21 @@
 @mixin MenuFonctionnement  {
-        display: flex;
-        background-color: $ColorReserver ;
-        padding: 0.35em;
-        position: relative;
-        margin: 0 02em 2em 02em;
-        border-radius: 1em;
-        box-shadow: 0em 0.4em 0.8em $ColorHombre;
+    display: flex;
+    background-color: $ColorReserver ;
+    padding: 0.35em;
+    position: relative;
+    margin: 0 02em 2em 02em;
+    border-radius: 1em;
+    box-shadow: 0em 0.4em 0.8em $ColorHombre;
+    cursor: pointer;   
+    
+    &:hover  {
+        background-color: $ColorSurvolFonctionnement;
+        box-shadow: 0em 0.8em 0.8em $ColorHombre
+    }
+    &:hover i {
         
+        color: $ColorPrimaire;
+    }
     &__Number {
         background-color: $ColorPrimaire;
         font-size: 1.1em;
@@ -26,7 +35,7 @@
         }
         &__Texte {
             font-size: 1.2em;
-            padding: 0.2em 0 0 0;
+            padding: 0.2em 02em 0 0;
             
         }
     }
@@ -39,7 +48,7 @@
     
     position: relative;
     margin-right: 2em;
-    margin-top: 2em ;
+    margin-top: 5.2em ;
 
     fill:transparent;
     stroke: $CoeurVide;

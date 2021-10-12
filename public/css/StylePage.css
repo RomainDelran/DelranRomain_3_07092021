@@ -290,24 +290,6 @@
     margin: 0;
     padding: 0 0 0em 0;
   }
-}
-@media all and (max-width: 1023.98px) and (max-width: 419.98px) {
-  article .ContenuMenu__Descriptif p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 7em;
-  }
-}
-@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
-  article .ContenuMenu__Descriptif p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 12em;
-  }
-}
-@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif h2 {
     position: relative;
     margin: 0;
@@ -315,8 +297,6 @@
     font-weight: 1000;
     top: -0.5em;
   }
-}
-@media all and (max-width: 1023.98px) {
   article:hover p {
     max-width: 8em;
     white-space: nowrap;

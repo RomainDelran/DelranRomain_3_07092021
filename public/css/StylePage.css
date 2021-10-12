@@ -279,29 +279,8 @@
   }
   article .ContenuMenu h3 {
     margin: 0em 0em 0em 0em;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 0 4em 0 0;
   }
-}
-@media all and (max-width: 1023.98px) and (max-width: 419.98px) {
-  article .ContenuMenu h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 7em;
-  }
-}
-@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
-  article .ContenuMenu h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 12em;
-  }
-}
-@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif {
     display: flex;
     justify-content: space-between;

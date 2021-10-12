@@ -293,6 +293,14 @@
     width: 7em;
   }
 }
+@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
+  article .ContenuMenu h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12em;
+  }
+}
 @media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif {
     display: flex;
@@ -310,6 +318,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 7em;
+  }
+}
+@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
+  article .ContenuMenu__Descriptif p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12em;
   }
 }
 @media all and (max-width: 1023.98px) {

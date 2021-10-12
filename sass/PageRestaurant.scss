@@ -176,11 +176,18 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 @media all and (max-width: 419.98px) {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     width: 7em;
+                }
+                @media (min-width: 420px) and (max-width:  481px) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 12em;
                 }
             }
             
@@ -197,6 +204,13 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         width: 7em;
+                    }
+
+                    @media (min-width: 420px) and (max-width: 481px) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 12em;
                     }
                     
                 }

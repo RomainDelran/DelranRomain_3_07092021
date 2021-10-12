@@ -42,13 +42,13 @@
 
 }
 
-@mixin AnimationCoeurPageInterieur () {
+@mixin AnimationCoeurPageInterieur ($Position:2.2em) {
     width: 2em;
     height: 2em;
     
     position: relative;
     margin-right: 2em;
-    margin-top: 5.2em ;
+    margin-top: $Position ;
 
     fill:transparent;
     stroke: $CoeurVide;

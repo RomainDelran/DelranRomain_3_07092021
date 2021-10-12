@@ -160,6 +160,7 @@
         justify-content: space-between;        
         overflow: hidden;
         cursor: pointer;
+        
 
         & .ContenuMenu {
             width: 100%;
@@ -175,6 +176,12 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                @media all and (max-width: 419.98px) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 7em;
+                }
             }
             
             &__Descriptif {
@@ -185,7 +192,12 @@
                 & p {
                     margin: 0;
                     padding: 0 0 0em  0;
-
+                    @media all and (max-width: 419.98px) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 7em;
+                    }
                     
                 }
                 & h2 {
@@ -411,7 +423,7 @@
         }
         &__Coeur {
             margin: 0em 0 0 0;
-            @include AnimationCoeurPageInterieur ();
+            @include AnimationCoeurPageInterieur (5.2em);
         }
     }
 
@@ -490,6 +502,8 @@
         justify-content: space-between;        
         overflow: hidden;
         cursor: pointer;
+        
+        
 
         & .ContenuMenu {
             width: 100%;
@@ -504,6 +518,8 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
+
             }
             &__Descriptif {
                 display: flex;

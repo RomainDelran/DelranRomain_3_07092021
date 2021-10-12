@@ -172,7 +172,7 @@
     height: 2em;
     position: relative;
     margin-right: 2em;
-    margin-top: 5.2em;
+    margin-top: 2.2em;
     fill: transparent;
     stroke: black;
     stroke-width: 40;
@@ -284,6 +284,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+@media all and (max-width: 1023.98px) and (max-width: 419.98px) {
+  article .ContenuMenu h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 7em;
+  }
+}
+@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif {
     display: flex;
     justify-content: space-between;
@@ -293,6 +303,16 @@
     margin: 0;
     padding: 0 0 0em 0;
   }
+}
+@media all and (max-width: 1023.98px) and (max-width: 419.98px) {
+  article .ContenuMenu__Descriptif p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 7em;
+  }
+}
+@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif h2 {
     position: relative;
     margin: 0;
@@ -300,6 +320,8 @@
     font-weight: 1000;
     top: -0.5em;
   }
+}
+@media all and (max-width: 1023.98px) {
   article:hover p {
     max-width: 8em;
     white-space: nowrap;

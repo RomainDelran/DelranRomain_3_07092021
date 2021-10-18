@@ -185,7 +185,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 0em;
-    padding: auto;
   }
   .Reserver__Titre {
     width: 75%;
@@ -778,7 +777,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 0em;
-    padding: auto;
   }
   .Reserver__Titre {
     width: 75%;

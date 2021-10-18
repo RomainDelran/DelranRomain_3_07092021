@@ -172,7 +172,19 @@
             & h3 {
                 margin:0em 0em 0em 0em;
                 padding: 0 03.5em 0 0;
-                
+
+                @media all and (max-width: 420px) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 9em;
+                }
+                @media (min-width: 420px) and (max-width:  481px) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 14em;
+                }
                 
             }
             
@@ -184,7 +196,18 @@
                 & p {
                     margin: 0;
                     padding: 0 0 0em  0;
-               
+                    @media all and (max-width: 419.95px) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 9em;
+                    }
+                    @media (min-width: 420px) and (max-width:  481px) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 14em;
+                    }
                     
                 }
                 & h2 {
@@ -253,6 +276,7 @@
     .Bouton {
         background-color: $ColorLocalisation ;
         padding: 2em 0 5em 0;
+        
         &__Commander {
             width: 10em;
             margin: 00em auto 0em auto;
@@ -261,6 +285,10 @@
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
             cursor: pointer;
+
+            transition: box-shadow 0.5s, background 0.5s ;
+            @include SurvolBoutonPrincipal () ;
+
             & h2 {
                 text-align: center;
                 padding: 0em;
@@ -268,6 +296,7 @@
                 color: white;
                 font-size: 1.1em;
             }
+            
         }
     }
 
@@ -499,12 +528,15 @@
             padding:1em 0em 01em 01em;
             text-overflow: ellipsis;
 
+            
+
             & h3 {
                 margin: 0;
                 padding: 0;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
                 
 
             }
@@ -515,6 +547,7 @@
                 & p {
                     margin: 0;
                     padding: 0;
+                    
                 }
                 & h2 {
                     position: relative;
@@ -522,6 +555,7 @@
                     padding: 0 1.5em 0em  1.5em;
                     font-weight: 1000 ;
                     font-size: 1em;
+                    
                 }
             }
         }
@@ -562,6 +596,8 @@
             border-radius: 2em 2em 2em 2em; 
             box-shadow: 0em 0.4em 0.8em $ColorHombre;
             cursor: pointer;
+            transition: box-shadow 0.5s, background 0.5s ;
+            @include SurvolBoutonPrincipal () ;
             & h2 {
                 text-align: center;
                 padding: 0em;

@@ -207,3 +207,18 @@
         @include AnimationCoeur ();
     }
 }
+
+
+@mixin SurvolBoutonPrincipal {
+
+
+    &:hover  {
+        
+        
+        box-shadow: 0em 1.8em 1.8em $ColorHombre;
+        background: linear-gradient(  $ColorSecondaire2, $ColorPrimaire2);
+        transition: box-shadow 0.5s, background 0.5s;
+        
+    }
+
+}

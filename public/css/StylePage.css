@@ -280,6 +280,24 @@
     margin: 0em 0em 0em 0em;
     padding: 0 3.5em 0 0;
   }
+}
+@media all and (max-width: 1023.98px) and (max-width: 420px) {
+  article .ContenuMenu h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 9em;
+  }
+}
+@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
+  article .ContenuMenu h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 14em;
+  }
+}
+@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif {
     display: flex;
     justify-content: space-between;
@@ -289,6 +307,24 @@
     margin: 0;
     padding: 0 0 0em 0;
   }
+}
+@media all and (max-width: 1023.98px) and (max-width: 419.95px) {
+  article .ContenuMenu__Descriptif p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 9em;
+  }
+}
+@media (max-width: 1023.98px) and (min-width: 420px) and (max-width: 481px) {
+  article .ContenuMenu__Descriptif p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 14em;
+  }
+}
+@media all and (max-width: 1023.98px) {
   article .ContenuMenu__Descriptif h2 {
     position: relative;
     margin: 0;
@@ -296,6 +332,8 @@
     font-weight: 1000;
     top: -0.3em;
   }
+}
+@media all and (max-width: 1023.98px) {
   article:hover p {
     max-width: 8em;
     white-space: nowrap;
@@ -362,6 +400,12 @@
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
     cursor: pointer;
+    transition: box-shadow 0.5s, background 0.5s;
+  }
+  .Bouton__Commander:hover {
+    box-shadow: 0em 1.8em 1.8em #aaaaaa;
+    background: linear-gradient(#fb9de1, #9b65dd);
+    transition: box-shadow 0.5s, background 0.5s;
   }
   .Bouton__Commander h2 {
     text-align: center;
@@ -668,6 +712,12 @@
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
     cursor: pointer;
+    transition: box-shadow 0.5s, background 0.5s;
+  }
+  .Bouton__Commander:hover {
+    box-shadow: 0em 1.8em 1.8em #aaaaaa;
+    background: linear-gradient(#fb9de1, #9b65dd);
+    transition: box-shadow 0.5s, background 0.5s;
   }
   .Bouton__Commander h2 {
     text-align: center;

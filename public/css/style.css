@@ -207,6 +207,12 @@
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
     cursor: pointer;
+    transition: box-shadow 0.5s, background 0.5s;
+  }
+  .Reserver__BoutonExplorerNosRestaurants:hover {
+    box-shadow: 0em 1.8em 1.8em #aaaaaa;
+    background: linear-gradient(#fb9de1, #9b65dd);
+    transition: box-shadow 0.5s, background 0.5s;
   }
   .Reserver__BoutonExplorerNosRestaurants h2 {
     padding: 0em;
@@ -799,6 +805,12 @@
     border-radius: 2em 2em 2em 2em;
     box-shadow: 0em 0.4em 0.8em #aaaaaa;
     cursor: pointer;
+    transition: box-shadow 0.5s, background 0.5s;
+  }
+  .Reserver__BoutonExplorerNosRestaurants:hover {
+    box-shadow: 0em 1.8em 1.8em #aaaaaa;
+    background: linear-gradient(#fb9de1, #9b65dd);
+    transition: box-shadow 0.5s, background 0.5s;
   }
   .Reserver__BoutonExplorerNosRestaurants h2 {
     padding: 0em;
